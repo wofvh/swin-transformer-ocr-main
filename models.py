@@ -6,9 +6,7 @@ from x_transformers import *
 from x_transformers.autoregressive_wrapper import *
 
 from timm.models.swin_transformer import SwinTransformer
-
 import utils
-
 class SwinTransformerOCR(pl.LightningModule):
     def __init__(self, cfg, tokenizer):
         super().__init__()
