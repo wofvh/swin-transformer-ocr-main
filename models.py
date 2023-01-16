@@ -4,7 +4,6 @@ import pytorch_lightning as pl
 
 from x_transformers import *
 from x_transformers.autoregressive_wrapper import *
-
 from timm.models.swin_transformer import SwinTransformer
 import utils
 class SwinTransformerOCR(pl.LightningModule):
