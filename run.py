@@ -9,6 +9,7 @@ from utils import load_setting, save_tokenizer, CustomTensorBoardLogger, load_to
 
 from torch.utils.data import DataLoader
 
+#gpu 셋업
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--setting", "-s", type=str, default="settings/default.yaml",
@@ -23,6 +24,11 @@ if __name__ == "__main__":
                         help="Batch size for training and validate")
     parser.add_argument("--resume_train", "-rt", type=str, default="",
                         help="Resume train from certain checkpoint")
+    parser.add_argument("--gpus", "-g", type=int, default=1,
+    
+                        help="Number of gpus to use")
+    parser.add_argument("--seed", "-s", type=int, default=42,
+                        help="Random seed")
     args = parser.parse_args()
 
     cfg = load_setting(args.setting)
