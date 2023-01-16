@@ -9,7 +9,6 @@ from utils import load_setting, save_tokenizer, CustomTensorBoardLogger, load_to
 
 from torch.utils.data import DataLoader
 
-#gpu 셋업
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--setting", "-s", type=str, default="settings/default.yaml",
